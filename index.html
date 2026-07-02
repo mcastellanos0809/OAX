@@ -229,6 +229,15 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
    SLIDE 5 — LOS CHEFS
    ============================================= */
 .s5{background:var(--bg);}
+.s5-bg-bottle{
+  position:absolute;inset:0;
+  background-image:url('foto-botella.png');
+  background-size:cover;background-position:center;
+}
+.s5-bg-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(13,26,14,0.92) 0%,rgba(13,26,14,0.80) 55%,rgba(13,26,14,0.40) 100%);
+}
 .s5-cnt{
   position:absolute;inset:0;
   display:flex;flex-direction:column;justify-content:center;
@@ -511,6 +520,9 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
      PHOTOS: Añadir <img> dentro de .s5-photo-lula / pablo / ger
      ============================================= -->
 <section class="slide s5" aria-label="Los Chefs">
+  <!-- Bottle background -->
+  <div class="s5-bg-bottle"></div>
+  <div class="s5-bg-veil"></div>
   <!-- Chrome -->
   <div class="gchr">
     <span class="glabel">La Cosecha Sagrada</span>
@@ -523,6 +535,9 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
       <h2 class="gh2">
         Tres referentes de la<br>gastronomía <em>mexicana.</em>
       </h2>
+      <p class="glead" data-anim="fade-up" data-delay="1" style="margin-top:var(--gsm);max-width:820px;">
+        Quienes transformarán la cosecha sagrada del día en una experiencia gastronómica irrepetible.
+      </p>
     </div>
     <div class="s5-chefs">
       <!-- Chef 1: Lula Martín del Campo -->
@@ -695,8 +710,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
         <li>Taller privado con Adán Paredes</li>
         <li>Comida tradicional en su casa</li>
         <li>Kit de bienvenida exclusivo</li>
-        <li>Regalos de edición limitada</li>
-        <li>Botella personalizada de colección</li>
+        <li>Pieza de cerámica trabajada con la guía de Adán Paredes</li>
       </ul>
     </div>
   </div>
