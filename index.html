@@ -55,8 +55,8 @@ html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#0d1a0e;}
 .slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:block;visibility:hidden;opacity:0;pointer-events:none;background:#192b1b;}
 .slide.active{visibility:visible;opacity:1;pointer-events:auto;z-index:1;}
 img,video,canvas,svg{max-width:100%;max-height:100%;}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important;}}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+@media(prefers-reduced-motion:reduce){,::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important;}}
+,::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 
 /* === GROVE TYPOGRAPHY === */
 .gd{font-family:'Playfair Display',Georgia,serif;font-size:var(--display);font-weight:400;line-height:1;letter-spacing:-0.01em;color:var(--fg);}
@@ -794,7 +794,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
 
 <!-- Inline edit -->
 <div class="edit-hz" id="editHz"></div>
-<button class="edit-toggle" id="editToggle" title="Modo edición (E)" aria-label="Activar modo edición">✏</button>
+<button class="edit-toggle" id="editToggle" title="Modo edición (E)" aria-label="Activar modo edición">✏️</button>
 
 <script>
 /* =============================================
@@ -820,14 +820,14 @@ class Deck {
     const f  = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
     const tx = (window.innerWidth  - 1920 * f) / 2;
     const ty = (window.innerHeight - 1080 * f) / 2;
-    this.stage.style.transform = `translate(${tx}px,${ty}px) scale(${f})`;
+    this.stage.style.transform = translate(${tx}px,${ty}px) scale(${f});
   }
 
   buildDots() {
     this.slides.forEach((_, i) => {
       const d = document.createElement('button');
       d.className = 'nav-dot';
-      d.setAttribute('aria-label', `Diapositiva ${i + 1}`);
+      d.setAttribute('aria-label', Diapositiva ${i + 1});
       d.addEventListener('click', () => this.go(i));
       this.dots.appendChild(d);
     });
